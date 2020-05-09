@@ -1,0 +1,29 @@
+// message is defined using the proto3 syntax
+syntax = "proto3";
+
+// Message represents data about a person registered in the system
+message Person {
+    // age of person when they signed up to the system
+    int32   age = 1;
+    // first name of person as per the signup form
+    string  first_name = 2;
+    string  second_ame = 3;
+    // bytes of the photo in .jpg format
+    bytes   photo_id = 4;
+    // is true if the person verified their email address
+    bool    is_profile_verified = 5;
+    // the height of the person in cms
+    float   height = 6;
+
+    // list of phone numbers
+    repeated string phone_numbers = 7;
+
+    Date date_of_birth = 8;
+}
+
+
+message Date {
+    int32 year = 1;
+    int32 month = 2;
+    int32 day = 3;
+}
